@@ -1,0 +1,6 @@
+SELECT Revenue
+       SUM(Revenue) AS total_revenue
+FROM Website_Revenue
+GROUP BY state_column
+ORDER BY total_revenue DESC
+LIMIT 3;
