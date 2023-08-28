@@ -1,0 +1,6 @@
+SELECT DAYNAME(date_column) AS day_of_week,
+       AVG(metric_impressions) AS average_metric
+FROM marketing_performance
+GROUP BY DAYOFWEEK(date_column)
+ORDER BY average_metric DESC
+LIMIT 1;
