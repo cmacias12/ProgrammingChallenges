@@ -1,0 +1,7 @@
+SELECT geo,
+       SUM(conversions) AS total_conversions
+FROM marketing_performance
+WHERE campaign_name = 'Campaign5'
+GROUP BY state_column
+ORDER BY total_conversions DESC
+LIMIT 1;
